@@ -7,8 +7,9 @@ local UITestMainView = BaseClass("UITestMainView", UIBaseView)
 local base = UIBaseView
 
 -- 各个组件路径
-local fighting_btn_path = "ContentRoot/BtnGrid/FightingBtn"
+local fighting_btn_path = "ContentRoot/BtnGrid/EnterGameBtn" --进入游戏
 local logout_btn_path = "ContentRoot/BtnGrid/LogoutBtn"
+
 
 local function OnCreate(self)
 	base.OnCreate(self)
