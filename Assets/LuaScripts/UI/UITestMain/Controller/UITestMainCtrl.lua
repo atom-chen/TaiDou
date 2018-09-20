@@ -4,11 +4,11 @@
 --]]
 
 local UITestMainCtrl = BaseClass("UITestMainCtrl", UIBaseCtrl)
-
+--进入游戏
 local function StartFighting(self)
 	SceneManager:GetInstance():SwitchScene(SceneConfig.BattleScene)
 end
-
+--返回登录
 local function Logout(self)
 	SceneManager:GetInstance():SwitchScene(SceneConfig.LoginScene)
 end

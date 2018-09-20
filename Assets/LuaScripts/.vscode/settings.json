@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/*.meta":true
+    },
+    "extensions.autoUpdate": false,
+    "luaide.scriptRoots": ["D:/Project/Assets/Scripts/Lua"],
+    "luaide.luaTemplatesDir": "C:/Users/Administrator/.vscode/extensions/kangping.luaide-0.3.7/Template" ,
+    "luaide.macroList": [
+        {
+            "name":"author",
+            "value":"zhangliang"
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+}

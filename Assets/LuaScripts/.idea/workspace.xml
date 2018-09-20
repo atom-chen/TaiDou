@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="026bbb0a-1f8e-4242-a6d0-8f7cc773a3a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.vs/TaiDou/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/TaiDou/v14/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AssetsPackage/UI/Prefabs/View/UITestMain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AssetsPackage/UI/Prefabs/View/UITestMain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Framework/Common/BaseClass.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Framework/Common/BaseClass.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Framework/UI/Base/UIBaseContainer.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Framework/UI/Base/UIBaseContainer.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UITestMain/Controller/UITestMainCtrl.lua" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UITestMain/Controller/UITestMainCtrl.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UITestMain/UITestMainConfig.lua" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UITestMain/UITestMainConfig.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UITestMain/View/UITestMainView.lua" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UITestMain/View/UITestMainView.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/BattleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/BattleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/LaunchScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/LaunchScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/CurrentLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/LastBuild.buildreport" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/expandedItems" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/00/00000000000000004000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/00/00000000000000004000000000000000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/01/01d847e3c8820e1469b21a81836f4fd2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/01/01d847e3c8820e1469b21a81836f4fd2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/0a/0aaf6511cbaa12042849665943489674" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/0a/0aaf6511cbaa12042849665943489674" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/14/14ca372e6f4e99e4dad9246ff7e7f381" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/14/14ca372e6f4e99e4dad9246ff7e7f381" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/1a/1aca2dc75262982469dbbb57bc98e07f" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/1a/1aca2dc75262982469dbbb57bc98e07f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/1e/1ea95cc474d954f40a8bf9a6964b0079" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/1e/1ea95cc474d954f40a8bf9a6964b0079" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/21/2105fd8f74a0c434e9b77b1d0b6c9c70" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/21/2105fd8f74a0c434e9b77b1d0b6c9c70" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/24/24f1fa387d6cff04d91b8d39e4570b0e" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/24/24f1fa387d6cff04d91b8d39e4570b0e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/2f/2fef8441bbce53147a61ea3879488d27" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/2f/2fef8441bbce53147a61ea3879488d27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/39/39ced16a730015047b9bcca32e5a15ef" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/39/39ced16a730015047b9bcca32e5a15ef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/3f/3f7df8010df53c948b9c9606a2d21cb8" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/3f/3f7df8010df53c948b9c9606a2d21cb8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/4c/4c22aa050c0117641b9a2ac0329d007f" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/4c/4c22aa050c0117641b9a2ac0329d007f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/4c/4cc9f7d0f5c0c914b9eb1ad1cf4c918e" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/4c/4cc9f7d0f5c0c914b9eb1ad1cf4c918e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/50/50071e78d93f6f84394bbea49221a0f8" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/50/50071e78d93f6f84394bbea49221a0f8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/51/51c42460c2cb74744a9cdeb1235c9ca9" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/51/51c42460c2cb74744a9cdeb1235c9ca9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/53/5300670e61eaa2f47b81a63b4fc982dc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/53/5300670e61eaa2f47b81a63b4fc982dc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/54/5416ceafe2dc7684f960a0e294f22434" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/54/5416ceafe2dc7684f960a0e294f22434" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/55/55c5957744621894693da399fa8d1fc2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/55/55c5957744621894693da399fa8d1fc2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/57/57ae58566454e034eabdeabf7be99cb2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/57/57ae58566454e034eabdeabf7be99cb2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/57/57ae58566454e034eabdeabf7be99cb2.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/57/57ae58566454e034eabdeabf7be99cb2.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/5b/5b92a2df16f727149b95cc160783a5e3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/5b/5b92a2df16f727149b95cc160783a5e3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/5b/5b92a2df16f727149b95cc160783a5e3.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/5b/5b92a2df16f727149b95cc160783a5e3.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/5d/5d6da47bfbf766743b2b199b34da8c16" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/5d/5d6da47bfbf766743b2b199b34da8c16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/5e/5e7a53ca4ac8c114b943d096c1657394" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/5e/5e7a53ca4ac8c114b943d096c1657394" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/5e/5ebddb6785be0704dbf49a03ca6dd0b5" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/5e/5ebddb6785be0704dbf49a03ca6dd0b5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/6d/6d148f2b5b0942c48933b1675373d9bc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/6d/6d148f2b5b0942c48933b1675373d9bc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/6d/6d148f2b5b0942c48933b1675373d9bc.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/6d/6d148f2b5b0942c48933b1675373d9bc.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/79/791c685d5efc152488e6af7ab723eb8d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/79/791c685d5efc152488e6af7ab723eb8d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/7c/7c6d6536e5464d04680cc3580d95eb24" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/7c/7c6d6536e5464d04680cc3580d95eb24" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/7d/7dd8485462bd28a428faa9d6f1afe73a" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/7d/7dd8485462bd28a428faa9d6f1afe73a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/7e/7e7776e984420e243986a0ca21237352" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/7e/7e7776e984420e243986a0ca21237352" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/86/860b25d21777df64baabc6bc804ea5d7" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/86/860b25d21777df64baabc6bc804ea5d7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/92/92730dfb43f7d814997567196563817a" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/92/92730dfb43f7d814997567196563817a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/94/94da153f0d6630344abe5537481bf2cf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/94/94da153f0d6630344abe5537481bf2cf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/95/9512bf1daa22aef42980a98da5a89b18" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/95/9512bf1daa22aef42980a98da5a89b18" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/9e/9e4c52e5911d89745a8a33269827115a" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/9e/9e4c52e5911d89745a8a33269827115a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/9f/9fb606c72e7ed7c418bc7b2963f06aca" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/9f/9fb606c72e7ed7c418bc7b2963f06aca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/a2/a29fcaed21e3e6e4cbf7b9e78dcd2ee6" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/a2/a29fcaed21e3e6e4cbf7b9e78dcd2ee6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/a7/a797278fa677211478a8dd17ab8d0a8f" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/a7/a797278fa677211478a8dd17ab8d0a8f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/a7/a797278fa677211478a8dd17ab8d0a8f.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/a7/a797278fa677211478a8dd17ab8d0a8f.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/b6/b670b3738ac89c047a18595fc87e0cf8" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/b6/b670b3738ac89c047a18595fc87e0cf8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/b8/b84a16872c925f84c8afdc9dbb7c8f5f" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/b8/b84a16872c925f84c8afdc9dbb7c8f5f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/d5/d570a591578c55c42901865b468ca53d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/d5/d570a591578c55c42901865b468ca53d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/d8/d8e4e3e88a7f0a6438baa1954bdfbacd" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/d8/d8e4e3e88a7f0a6438baa1954bdfbacd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/de/de9852ad5b99af04991d39982afa9e10" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/de/de9852ad5b99af04991d39982afa9e10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/ee/eeb287ef62e4a68488316d5e29120a70.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/ee/eeb287ef62e4a68488316d5e29120a70.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/f6/f6a2e7058f73ce74d8d21c9e5ed9db31" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/f6/f6a2e7058f73ce74d8d21c9e5ed9db31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/metadata/fe/febc228cacb117e4ca61d1754161d7be" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/metadata/fe/febc228cacb117e4ca61d1754161d7be" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-243099601">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Init" value="2" />
+          <entry key="lua" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="lua" value="24" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Framework/UI/Base/UIBaseContainer.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="81" column="59" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="lua-dummy://root/Init">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Framework/Logger/Logger.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="uibase&#9;FILE&#9;file://D:/MyPro/TaiDou/Assets/LuaScripts/Framework/UI/Base/UIBaseContainer.lua" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537446058872" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="026bbb0a-1f8e-4242-a6d0-8f7cc773a3a4" name="Default Changelist" comment="" />
+      <created>1537421918082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537421918082</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5059718" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="LuaCheck" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/UI/UILogin/View/UILoginServerView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Updater/UpdateManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Common/DataClass.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameMain.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Tools/event.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/EmmyLua/classes/debugger/Emmy.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/UILogin/View/UILoginView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3630">
+          <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/UI/UIManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5280">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Updater/Coroutine.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7320">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Tools/UnityEngine/Time.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Updater/Timer.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Updater/TimerManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3090">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Common/BaseClass.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2490">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/UITestMain/View/UITestMainView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="51" column="4" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="lua-dummy://root/Init">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/Logger/Logger.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Framework/UI/Base/UIBaseContainer.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="81" column="59" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Lua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>LuaScripts</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
