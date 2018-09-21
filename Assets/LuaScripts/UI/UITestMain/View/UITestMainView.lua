@@ -4,18 +4,13 @@
 local UITestMainView = BaseClass("UITestMainView", UIBaseView)
 local base = UIBaseView
 
+local ROLE_COUNT = 4 --角色
 -- 各个组件路径 
+--进入游戏
 local logout_btn_path = "EnterGame/BtnRoot/LogoutBtn"
 local entergame_btn_path = "EnterGame/BtnRoot/EnterGameBtn"
-
-local entergame_tran_path = "EnterGame"
-local createrole_tran_path = "CreateRole"
-local back_entergame_btn_path = "CreateRole/backBtn"
-local createrole_btn_path = "CreateRole/sureBtn"
 local model_man_tran_path = "EnterGame/RoleInfo/roleModel/man_stand"
 local model_woman_tran_path = "EnterGame/RoleInfo/roleModel/girl_stand"
-
-local ROLE_COUNT = 4 --角色
 local role_btn_path_list = {}
 local role_text_path_list = {}
 for i = 1, ROLE_COUNT do
@@ -24,7 +19,12 @@ for i = 1, ROLE_COUNT do
 	local role_text_path = "EnterGame/ChangeRole/role" .. i .. "/Text" .. i
 	role_text_path_list[#role_text_path_list + 1] = role_text_path
 end
-
+--创建角色
+local back_entergame_btn_path = "CreateRole/backBtn"
+local createrole_btn_path = "CreateRole/sureBtn"
+local entergame_tran_path = "EnterGame"
+local createrole_tran_path = "CreateRole"
+local rolename_input_path = "CreateRole/roleNameInput"
 
 local function OnCreate(self)
 	base.OnCreate(self)
@@ -32,13 +32,13 @@ local function OnCreate(self)
 	self.enterGame_btn = self:AddComponent(UIButton, entergame_btn_path)
 	self.logOut_btn = self:AddComponent(UIButton, logout_btn_path)
 	self.backEnterGame_btn = self:AddComponent(UIButton, back_entergame_btn_path)
-	self.createRole_btn = self.AddComponent(UIButton, createrole_btn_path)
+	self.createRole_btn = self:AddComponent(UIButton, createrole_btn_path)
 	
 	self.enterGame_tran = self:AddComponent(UIButton, entergame_tran_path)
 	self.createRole_tran = self:AddComponent(UIButton, createrole_tran_path)
 	self.manRole_tran = self:AddComponent(UIButton , model_man_tran_path)
 	self.womanRole_tran = self:AddComponent(UIButton , model_woman_tran_path)
-
+	self.roleName_input = self:AddComponent(UIInput , rolename_input_path)
 	local selectRole_btn_list = {}
 	self.roleName_text_list = {}
 	for i = 1, ROLE_COUNT do
@@ -110,6 +110,13 @@ function UITestMainView:BackEnterGame()
 end
 --创建角色
 function UITestMainView:CreateRole()
+	local name = self.roleName_input:GetText()
+	if string.len(name) > 4 or string.len(name) < 1 then
+		-- TODO：错误弹窗
+		Logger.LogError("name length err!")
+	    return;
+	end
+	print("--------------->"..name)
 	self.enterGame_tran:SetActive(true)
 	self.createRole_tran:SetActive(false)
 end
