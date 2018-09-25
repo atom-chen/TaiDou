@@ -19,12 +19,11 @@ local UserData = BaseClass("UserData", Singleton)
 local RoleData = DataClass("RoleData", RoleData)
 
 local function __init(self)
-	-- 所有服务器列表
 	self.servers = {}
 end
 
 -- 解析网络数据
-local function ParseServerList(self, servers)
+local function ParseUserData(self, servers)
 	self.servers = {}
 	for _,v in pairs(servers) do
 		local roleData = RoleData.New()
@@ -41,6 +40,6 @@ local function ParseServerList(self, servers)
 	--DataManager:GetInstance():Broadcast(DataMessageNames.ON_SERVER_LIST_CHG, self)
 end
 
-UserData.ParseServerList = ParseServerList
+UserData.ParseUserData = ParseUserData
 
 return UserData

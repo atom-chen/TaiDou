@@ -36,7 +36,7 @@ local function OnClose(self, sender, result, msg)
 end
 
 local function ConnectServer(self)
-	HallConnector:GetInstance():Connect("192.168.1.245", 10020, Bind(self, OnConnect), Bind(self, OnClose))
+	HallConnector:GetInstance():Connect("127.0.0.1", 4530, Bind(self, OnConnect), Bind(self, OnClose))
 end
 
 local function LoginServer(self, name, password)
@@ -64,8 +64,8 @@ local function LoginServer(self, name, password)
 	ClientData:GetInstance():SetAccountInfo(name, password)
 	
 	-- TODO
-	--ConnectServer(self)
-	SceneManager:GetInstance():SwitchScene(SceneConfig.HomeScene)
+	ConnectServer(self)
+	--SceneManager:GetInstance():SwitchScene(SceneConfig.HomeScene)
 end
 
 local function ChooseServer(self)

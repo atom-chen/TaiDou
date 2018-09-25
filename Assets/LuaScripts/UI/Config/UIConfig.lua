@@ -10,6 +10,7 @@ local UIModule = {
 	UINoticeTip = require "UI.UINoticeTip.UINoticeTipConfig",
 	UITestMain = require "UI.UITestMain.UITestMainConfig",
 	UIBattle = require "UI.UIBattle.UIBattleConfig",
+	UIMain = require "UI.UIMain.UIMainConfig", --游戏主界面
 }
 
 local UIConfig = {}

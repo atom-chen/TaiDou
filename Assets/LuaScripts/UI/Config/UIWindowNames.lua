@@ -11,10 +11,12 @@ local UIWindowNames = {
 	UILoading = "UILoading",
 	-- Tip窗口
 	UINoticeTip = "UINoticeTip",
-	-- TestMain
+	-- 角色选择
 	UITestMain = "UITestMain",
 	-- BattleMain
 	UIBattleMain = "UIBattleMain",
+	--游戏主
+	UIMain = "UIMain",
 }
 
 return ConstClass("UIWindowNames", UIWindowNames)
