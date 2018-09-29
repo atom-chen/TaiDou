@@ -36,6 +36,18 @@ local function OnClose(self, sender, result, msg)
 end
 
 local function ConnectServer(self)
+	local msd_id = MsgIDDefine.LOGIN_REQ_GET_UID
+    local msg = (MsgIDMap[msd_id])()
+	msg.plat_account = "455445"
+	msg.from_svrid = 4001
+	msg.device_id = ""
+	msg.device_model = "All Series (ASUS)"
+	msg.mobile_type = ""
+	msg.plat_token = ""
+	msg.app_ver = ""
+	msg.package_id = ""
+	msg.res_ver = ""
+	HallConnector:GetInstance():SendMessage(msd_id, msg)
 	HallConnector:GetInstance():Connect("127.0.0.1", 4530, Bind(self, OnConnect), Bind(self, OnClose))
 end
 

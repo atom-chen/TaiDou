@@ -44,8 +44,10 @@ local function SendMessage(self, msg_id, msg_obj, show_mask, need_resend)
 	local request_seq = 0
 	local send_msg = SendMsgDefine.New(msg_id, msg_obj, request_seq)
 	local msg_bytes = NetUtil.SerializeMessage(send_msg, self.globalSeq)
-	Logger.Log(tostring(send_msg))
-	self.hallSocket:SendMessage(msg_bytes)
+	Logger.Log("--------------客户端发送消息" .. msg_id .. "*****" .. tostring(send_msg))
+	luaPhotonSend = CS.Assets.Scripts.Photon.LuaPhotonSend()
+	luaPhotonSend:SendRequest(0 , msg_bytes)
+	--self.hallSocket:SendMessage(msg_bytes)
 	self.globalSeq = self.globalSeq + 1
 end
 

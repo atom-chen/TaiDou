@@ -37,7 +37,6 @@ local function ParseUserData(self, servers)
         roleData.roleGolds = v.roleGolds
 		self.servers[roleData.roleID] = roleData
 	end
-	--DataManager:GetInstance():Broadcast(DataMessageNames.ON_SERVER_LIST_CHG, self)
 end
 
 UserData.ParseUserData = ParseUserData
