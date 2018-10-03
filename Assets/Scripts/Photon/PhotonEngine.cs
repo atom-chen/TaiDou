@@ -5,7 +5,7 @@ using ExitGames.Client.Photon;
 using MyGameCommon;
 using MyGameCommon.Model;
 using MyGameCommon.Tools;
-
+using Assets.Scripts.Photon;
 
 public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
 {
@@ -111,6 +111,8 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
         {
             case StatusCode.Connect:
                 isConnected = true;
+                Logger.Log("######################连接服务器成功！！！！");
+                CSharpPhotonSend.ConnectSuccess();
                 //OnConnectedToServer();
                 break;
 
