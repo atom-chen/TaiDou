@@ -32,21 +32,22 @@ namespace Networks
 
         protected override void DoConnect()
         {
-            String newServerIp = "";
-            AddressFamily newAddressFamily = AddressFamily.InterNetwork;
-            IPv6SupportMidleware.getIPType(mIp, mPort.ToString(), out newServerIp, out newAddressFamily);
-            if (!string.IsNullOrEmpty(newServerIp))
-            {
-                mIp = newServerIp;
-            }
+            //String newServerIp = "";
+            //AddressFamily newAddressFamily = AddressFamily.InterNetwork;
+            //IPv6SupportMidleware.getIPType(mIp, mPort.ToString(), out newServerIp, out newAddressFamily);
+            //if (!string.IsNullOrEmpty(newServerIp))
+            //{
+            //    mIp = newServerIp;
+            //}
 
-            mClientSocket = new Socket(newAddressFamily, SocketType.Stream, ProtocolType.Tcp);
-            mClientSocket.BeginConnect(mIp, mPort, (IAsyncResult ia) =>
-            {
-                mClientSocket.EndConnect(ia);
-                OnConnected();
-            }, null);
-            mStatus = SOCKSTAT.CONNECTING;
+            //mClientSocket = new Socket(newAddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            //mClientSocket.BeginConnect(mIp, mPort, (IAsyncResult ia) =>
+            //{
+            //    mClientSocket.EndConnect(ia);
+            //    OnConnected();
+            //}, null);
+            //mStatus = SOCKSTAT.CONNECTING;
+            PhotonEngine.Instance.Connect();
         }
         
         protected override void DoClose()

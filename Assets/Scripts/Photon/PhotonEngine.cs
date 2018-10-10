@@ -36,11 +36,15 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
     void Awake()
     {
         _instance = this;
+        
+    }
+
+    public void Connect()
+    {
         peer = new PhotonPeer(this, protocol);
         peer.Connect(serverAddress, applicationName);
         DontDestroyOnLoad(this.gameObject);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -100,7 +104,7 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
         }
         else
         {
-            Logger.Log("Receive a unknown response . OperationCode :" + operationResponse.OperationCode);
+            CSharpPhotonSend.SendNetMsgToLua(operationResponse);           
         }
     }
 
