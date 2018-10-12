@@ -40,7 +40,7 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
     }
 
     public void Connect()
-    {
+    {      
         peer = new PhotonPeer(this, protocol);
         peer.Connect(serverAddress, applicationName);
         DontDestroyOnLoad(this.gameObject);
@@ -62,7 +62,7 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
 
     public void SendRequest(OperationCode opCode, Dictionary<byte, object> parameters)
     {
-        Logger.Log("sendrequest to server , opcode : " + opCode);
+        Logger.Log("##############sendrequest to server , opcode : " + opCode);
         peer.OpCustom((byte)opCode, parameters, true);
     }
 

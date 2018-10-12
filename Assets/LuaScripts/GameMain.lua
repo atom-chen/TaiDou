@@ -13,6 +13,7 @@ end
 -- 进入游戏
 local function EnterGame()
 	-- TODO：服务器信息应该从服务器上拉取，这里读取测试数据
+	HallConnector:GetInstance():Connect()
 	local ServerData = require "DataCenter.ServerData.ServerData"
 	local TestServerData = require "GameTest.DataTest.TestServerData"
 	local ClientData = require "DataCenter.ClientData.ClientData"

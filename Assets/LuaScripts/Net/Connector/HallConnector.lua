@@ -4,8 +4,8 @@
 --]]
 
 local HallConnector = BaseClass("HallConnector", Singleton)
-local SendMsgDefine = require "Net.Config.SendMsgDefine"
-local NetUtil = require "Net.Util.NetUtil"
+--local SendMsgDefine = require "Net.Config.SendMsgDefine"
+--local NetUtil = require "Net.Util.NetUtil"
 
 local ConnStatus = {
 	Init = 0,
@@ -19,21 +19,35 @@ local function __init(self)
 	self.globalSeq = 0
 end
 
-local function OnReceivePackage(self, receive_bytes)
-	local receive_msg = NetUtil.DeserializeMessage(receive_bytes)
-	Logger.Log(tostring(receive_msg))
+-- local function OnReceivePackage(self , receive_bytes)
+-- 	--local receive_msg = NetUtil.DeserializeMessage(receive_bytes)
+-- 	Logger.Log("------------------->>lua收到消息"  .. receive_msg.OperationCode)
+-- end
+
+
+function OnReceivePackage(receive_bytes )
+	--local receive_msg = NetUtil.DeserializeMessage(receive_bytes)
+	print("------------------->>>>>lua收到消息" .. receive_bytes.Parameters )
 end
 
-local function Connect(self, host_ip, host_port, on_connect, on_close)
+-- local function Connect(self, host_ip, host_port, on_connect, on_close)
+-- 	if not self.hallSocket then
+-- 		self.hallSocket = CS.Networks.HjTcpNetwork()
+-- 		self.hallSocket.ReceivePkgHandle = Bind(self, OnReceivePackage)
+-- 	end
+-- 	self.hallSocket.OnConnect = on_connect
+-- 	self.hallSocket.OnClosed = on_close
+-- 	self.hallSocket:SetHostPort(host_ip, host_port)
+-- 	self.hallSocket:Connect()
+-- 	Logger.Log("Connect to "..host_ip..", port : "..host_port)
+-- 	return self.hallSocket
+-- end
+
+local function Connect(self)
 	if not self.hallSocket then
-		self.hallSocket = CS.Networks.HjTcpNetwork()
-		self.hallSocket.ReceivePkgHandle = Bind(self, OnReceivePackage)
+		self.hallSocket = CS.Networks.HjTcpNetwork()		
 	end
-	self.hallSocket.OnConnect = on_connect
-	self.hallSocket.OnClosed = on_close
-	self.hallSocket:SetHostPort(host_ip, host_port)
 	self.hallSocket:Connect()
-	Logger.Log("Connect to "..host_ip..", port : "..host_port)
 	return self.hallSocket
 end
 
@@ -76,5 +90,5 @@ HallConnector.SendMessage = SendMessage
 HallConnector.Update = Update
 HallConnector.Disconnect = Disconnect
 HallConnector.Dispose = Dispose
-
+HallConnector.OnReceivePackage = OnReceivePackage
 return HallConnector

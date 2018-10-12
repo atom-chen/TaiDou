@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using CustomDataStruct;
 using System.Threading;
-
+using ExitGames.Client.Photon;
+using XLua;
+using System.IO;
 namespace Networks
 {
     public enum SOCKSTAT
@@ -13,12 +15,11 @@ namespace Networks
         CONNECTED,
     }
 
-    public abstract class HjNetworkBase
+    public class HjNetworkBase
     {
         public Action<object, int, string> OnConnect = null;
         public Action<object, int, string> OnClosed = null;
-        public Action<byte[]> ReceivePkgHandle = null;
-
+        public Action<object> ReceivePkgHandle = null;
         private List<HjNetworkEvt> mNetworkEvtList = null;
         private object mNetworkEvtLock = null;
 
@@ -35,7 +36,7 @@ namespace Networks
         private volatile bool mReceiveWork = false;
         private List<byte[]> mTempMsgList = null;
         protected IMessageQueue mReceiveMsgQueue = null;
-        
+        LuaEnv luaenv = null;
 
         public HjNetworkBase(int maxBytesOnceSent = 1024 * 512, int maxReceiveBuffer = 1024 * 1024 * 2)
         {
@@ -68,8 +69,8 @@ namespace Networks
             mIp = ip;
             mPort = port;
         }
-        
-        protected abstract void DoConnect();
+
+        public virtual void DoConnect() { }
         public void Connect()
         {
             Close();
@@ -78,6 +79,7 @@ namespace Networks
             string msg = null;
             try
             {
+                
                 DoConnect();
             }
             catch (ObjectDisposedException ex)
@@ -173,7 +175,7 @@ namespace Networks
             }
         }
 
-        protected abstract void DoReceive(StreamBuffer receiveStreamBuffer, ref int bufferCurLen);
+        protected virtual void DoReceive(StreamBuffer receiveStreamBuffer, ref int bufferCurLen) { }
         private void ReceiveThread(object o)
         {
             StreamBuffer receiveStreamBuffer = StreamBufferPool.GetStream(mMaxReceiveBuffer, false, true);
@@ -245,7 +247,53 @@ namespace Networks
                 }
             }
         }
+        //[CSharpCallLua]
+        //public delegate void Action01();
 
+        /// <summary>
+        /// 接收服务器返回数据
+        /// </summary>
+        public void ReciveMsg(OperationResponse operationResponse)
+        {
+            if (luaenv == null)
+            {
+                luaenv = new LuaEnv();
+                LuaEnv.CustomLoader method = CustomLoaderMethod;
+                luaenv.AddLoader(method);
+
+                luaenv.DoString("return require 'BaseClass'", "BaseClass");
+                luaenv.DoString("return require 'HallConnector'", "HallConnector");
+                luaenv.DoString("return require 'Logger'", "Logger");
+                ReceivePkgHandle = luaenv.Global.Get<Action<object>>("OnReceivePackage");
+            }
+
+            if (ReceivePkgHandle != null)
+            {
+                //Logger.Log("Receive a response . OperationCode :" + operationResponse.OperationCode);
+                ReceivePkgHandle(operationResponse);
+            }
+        }
+        private byte[] CustomLoaderMethod(ref string fileName)
+        {
+            //Logger.Log(fileName);
+            if ("HallConnector" == fileName)
+            {             
+                string fullName = "D:/MyPro/TaiDou/Assets/LuaScripts/Net/Connector/" + fileName + ".lua";
+                return File.ReadAllBytes(fullName);
+
+            }
+            else if ("BaseClass" == fileName)
+            {
+                string fullName = "D:/MyPro/TaiDou/Assets/LuaScripts/Framework/Common/" + fileName + ".lua";
+                return File.ReadAllBytes(fullName);
+            }
+            else if ("Logger" == fileName)
+            {
+                string fullName = "D:/MyPro/TaiDou/Assets/LuaScripts/Framework/Logger/" + fileName + ".lua";
+                return File.ReadAllBytes(fullName);
+            }
+            return null;
+        }
         private void UpdatePacket()
         {
             if (!mReceiveMsgQueue.Empty())

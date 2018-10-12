@@ -30,7 +30,7 @@ namespace Networks
             base.Dispose();
         }
 
-        protected override void DoConnect()
+        public override void DoConnect()
         {
             //String newServerIp = "";
             //AddressFamily newAddressFamily = AddressFamily.InterNetwork;
@@ -225,6 +225,7 @@ namespace Networks
         {
             typeof(Action<object, int, string>),
             typeof(Action<byte[]>),
+            typeof(Action<object>),
         };
     }
 #endif

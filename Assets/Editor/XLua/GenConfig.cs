@@ -94,6 +94,10 @@ public static class GenConfig
         typeof(Action<int>),
         typeof(Action<WWW>),
         typeof(Callback),
+        typeof(Action<object, int, string>),
+        typeof(Action<byte[]>),
+        typeof(Action<object>),
+
         typeof(UnityEngine.Event),
         typeof(UnityEngine.Events.UnityAction),
         typeof(System.Collections.IEnumerator),
