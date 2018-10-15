@@ -6,6 +6,10 @@ using System.Threading;
 using ExitGames.Client.Photon;
 using XLua;
 using System.IO;
+using Assets.Scripts.Photon;
+using MyGameCommon.Data;
+using MyGameCommon;
+using System.Runtime.Serialization.Formatters.Binary;
 namespace Networks
 {
     public enum SOCKSTAT
@@ -263,15 +267,28 @@ namespace Networks
 
                 luaenv.DoString("return require 'BaseClass'", "BaseClass");
                 luaenv.DoString("return require 'HallConnector'", "HallConnector");
-                luaenv.DoString("return require 'Logger'", "Logger");
+                //luaenv.DoString("return require 'Logger'", "Logger");
+                //luaenv.DoString("return require 'NetUtil'", "NetUtil");
                 ReceivePkgHandle = luaenv.Global.Get<Action<object>>("OnReceivePackage");
             }
 
             if (ReceivePkgHandle != null)
             {
+                object server = null;
+                if (operationResponse.Parameters.TryGetValue((byte)ParameterCode.ServerList, out server))
+                {
+                    ServerProperty serverProperty = SerializeTool.DeSerialize<ServerProperty>(ObjectToBytes(server));
+                }             
                 //Logger.Log("Receive a response . OperationCode :" + operationResponse.OperationCode);
                 ReceivePkgHandle(operationResponse);
             }
+        }
+        public byte[] ObjectToBytes(object data)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            MemoryStream rems = new MemoryStream();
+            formatter.Serialize(rems, data);
+            return rems.GetBuffer();
         }
         private byte[] CustomLoaderMethod(ref string fileName)
         {
@@ -287,11 +304,7 @@ namespace Networks
                 string fullName = "D:/MyPro/TaiDou/Assets/LuaScripts/Framework/Common/" + fileName + ".lua";
                 return File.ReadAllBytes(fullName);
             }
-            else if ("Logger" == fileName)
-            {
-                string fullName = "D:/MyPro/TaiDou/Assets/LuaScripts/Framework/Logger/" + fileName + ".lua";
-                return File.ReadAllBytes(fullName);
-            }
+            
             return null;
         }
         private void UpdatePacket()
