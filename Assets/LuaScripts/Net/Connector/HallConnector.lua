@@ -27,7 +27,7 @@ end
 
 function OnReceivePackage(receive_bytes )
 	--local receive_msg = NetUtil.DeserializeMessage(receive_bytes)
-	print("------------------->>>>>lua收到消息" .. receive_bytes.Parameters )
+	print("------------------->>>>>lua收到消息" .. receive_bytes.Length )
 end
 
 -- local function Connect(self, host_ip, host_port, on_connect, on_close)

@@ -7,9 +7,10 @@ using ExitGames.Client.Photon;
 using XLua;
 using System.IO;
 using Assets.Scripts.Photon;
-using MyGameCommon.Data;
+using Assets.Scripts.Photon.Data;
 using MyGameCommon;
 using System.Runtime.Serialization.Formatters.Binary;
+using ProtoBuf;
 namespace Networks
 {
     public enum SOCKSTAT
@@ -18,7 +19,14 @@ namespace Networks
         CONNECTING,
         CONNECTED,
     }
-
+    [ProtoContract]
+    public class Users
+    {
+        [ProtoMember(1)]
+        public int ID = 0;
+        [ProtoMember(2)]
+        public string UserName = "文清";
+    }
     public class HjNetworkBase
     {
         public Action<object, int, string> OnConnect = null;
@@ -274,21 +282,23 @@ namespace Networks
 
             if (ReceivePkgHandle != null)
             {
-                object server = null;
-                if (operationResponse.Parameters.TryGetValue((byte)ParameterCode.ServerList, out server))
-                {
-                    ServerProperty serverProperty = SerializeTool.DeSerialize<ServerProperty>(ObjectToBytes(server));
-                }             
-                //Logger.Log("Receive a response . OperationCode :" + operationResponse.OperationCode);
+
+                byte[] server = (byte[])(operationResponse.Parameters[(byte)ParameterCode.ServerList]);
+                //Users user = SerializeTool.DeSerialize<Users>(server);
+                ServerProperty serverProperty = SerializeTool.DeSerialize<ServerProperty>(server);
+                ServerPropertyData serverPropertyData = serverProperty.serverProperty[0];
                 ReceivePkgHandle(operationResponse);
             }
         }
-        public byte[] ObjectToBytes(object data)
+        public static byte[] ObjectToBytes(object data)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            MemoryStream rems = new MemoryStream();
-            formatter.Serialize(rems, data);
-            return rems.GetBuffer();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                MemoryStream rems = new MemoryStream();
+                formatter.Serialize(rems, data);
+                return rems.GetBuffer();
+            }
         }
         private byte[] CustomLoaderMethod(ref string fileName)
         {

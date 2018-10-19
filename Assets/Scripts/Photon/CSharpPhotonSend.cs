@@ -25,11 +25,11 @@ namespace Assets.Scripts.Photon
 
         public static void SendNetMsgToLua(OperationResponse operationResponse)
         {               
-            Dictionary<byte, object> parameters = operationResponse.Parameters;
-            object jsonObject = null;
-            parameters.TryGetValue((byte)ParameterCode.ServerList, out jsonObject);
-            List<MyGameCommon.Model.ServerProperty> serverList =
-            JsonMapper.ToObject<List<MyGameCommon.Model.ServerProperty>>(jsonObject.ToString());
+            //Dictionary<byte, object> parameters = operationResponse.Parameters;
+            //object jsonObject = null;
+            //parameters.TryGetValue((byte)ParameterCode.ServerList, out jsonObject);
+            //List<MyGameCommon.Model.ServerProperty> serverList =
+            //JsonMapper.ToObject<List<MyGameCommon.Model.ServerProperty>>(jsonObject.ToString());
             
             m_HjNetworkBase.ReciveMsg(operationResponse);
             //if (ReceivePkgHandle != null)

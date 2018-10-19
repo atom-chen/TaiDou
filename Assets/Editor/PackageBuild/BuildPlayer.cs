@@ -124,7 +124,7 @@ public class BuildPlayer : Editor
         string buildFolder = Path.Combine(System.Environment.CurrentDirectory, ApkOutputPath);
         GameUtility.CheckDirAndCreateWhenNeeded(buildFolder);
         BaseChannel channel = ChannelManager.instance.CreateChannel(channelName);
-        PlayerSettings.bundleIdentifier = channel.GetBundleID();
+        PlayerSettings.applicationIdentifier = channel.GetBundleID();
         PlayerSettings.productName = channel.GetPackageName();
 
         string savePath = null;
@@ -170,7 +170,7 @@ public class BuildPlayer : Editor
         PlayerSettings.SetIconsForTargetGroup(BuildTargetGroup.iOS, iconList.ToArray());
 
         BaseChannel channel = ChannelManager.instance.CreateChannel(channelName);
-        PlayerSettings.bundleIdentifier = channel.GetBundleID();
+        PlayerSettings.applicationIdentifier = channel.GetBundleID();
         PlayerSettings.productName = channel.GetPackageName();
         PackageUtils.CheckAndAddSymbolIfNeeded(buildTarget, channelName);
         BuildPipeline.BuildPlayer(GetBuildScenes(), buildFolder, buildTarget, BuildOptions.None);
